@@ -4,7 +4,7 @@
     <meta charset='utf-8' />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="description" content="Converse.js: Open Source Browser-Based Instant Messaging" />
+    <meta name="description" content="Converse.js: A chat client for your website" />
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
     <link rel="stylesheet" type="text/css" media="screen" href="converse.css">
     <!--<script data-main="main" src="components/requirejs/require.js"></script>-->
@@ -192,10 +192,11 @@
     require(['converse'], function (converse) {
         converse.initialize({
             allow_otr: true,
-            auto_list_rooms: false,
+            auto_list_rooms: true,
             auto_subscribe: false,
             bosh_service_url: 'https://bind.opkode.im', // Please use this connection manager only for testing purposes
             debug: true ,
+            wait: 10 ,
             hide_muc_server: false,
             i18n: locales['en'], // Refer to ./locale/locales.js to see which locales are supported
             prebind: false,
